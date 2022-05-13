@@ -1,0 +1,31 @@
+@import "../variables/variables";
+@import "../sass2/mixins";
+
+
+
+header {
+    
+    li{
+        margin: 15px;
+        width: 100%;
+    }
+    a{
+        margin: 1px;
+        font-size: 20px;
+    
+    }
+    a:hover {
+        background-color: $violet;
+    }
+    a:active {
+        background-color: $White;
+    }
+    .navbar-brand{
+        width: 10%;
+    }
+
+}
+
+.bg-color {
+    background-color: rgb(12, 12, 12);
+}

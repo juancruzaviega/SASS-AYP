@@ -1,0 +1,41 @@
+.home-contact{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 5%;
+    justify-content: space-evenly;
+    align-items: stretch;
+    .info-form{
+        margin-bottom: 30px;
+        padding: 1em;
+    }
+    .data{
+        margin: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .campo{
+        margin: 10px;
+    }
+    .mensaje{
+        margin: 10px;
+    }
+    .btn-enviar{
+        margin: 10px;
+        padding: 1em;
+    }
+}
+
+
+
+
+
+
+

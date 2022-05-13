@@ -1,0 +1,24 @@
+@mixin titulos {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: $h1Desktop;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: $alinear-centro;
+}
+
+h1 {
+    @include titulos;
+}
+
+@mixin sub-titulos {
+    font-family: $tipo-letra;
+    font-size: $h2Desktop;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: $alinear-centro;
+}
+
+h2{
+    @include sub-titulos;
+}

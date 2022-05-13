@@ -1,0 +1,26 @@
+footer{
+    display: grid;
+    grid-template-areas:
+        "copyr copyr"
+        "redes-uno redes-dos";
+    justify-content: center;
+    align-items: center;
+    justify-items: stretch;
+    align-content: center;
+    background-image: linear-gradient(to right, black, grey, gray, grey, black);
+    .copyr {
+        grid-area: copyr;
+    }
+    
+    .redes-uno {
+        grid-area: redes-uno;
+    }
+    
+    .redes-dos {
+        grid-area: redes-dos;
+    }
+    
+    .redes {
+        width: 10%;
+    }
+}
