@@ -7,7 +7,7 @@ footer{
     align-items: center;
     justify-items: stretch;
     align-content: center;
-    background-image: linear-gradient(to right, black, grey, gray, grey, black);
+    background-color: $fondo-color;
     .copyr {
         grid-area: copyr;
     }

@@ -529,7 +529,7 @@ footer {
   align-items: center;
   justify-items: stretch;
   align-content: center;
-  background-image: linear-gradient(to right, black, grey, gray, grey, black); }
+  background-color: black; }
   footer .copyr {
     grid-area: copyr; }
   footer .redes-uno {
@@ -617,3 +617,6 @@ footer {
   .home-contact .btn-enviar {
     margin: 10px;
     padding: 1em; }
+  .home-contact .contact {
+    font-weight: bolder;
+    font-size: xx-large; }
