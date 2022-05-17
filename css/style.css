@@ -4,36 +4,45 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+}
 
 h2 {
   font-family: verdana;
   font-size: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center; }
+  text-align: center;
+}
 
 header li {
   margin: 15px;
-  width: 100%; }
+  width: 100%;
+}
 
 header a {
   margin: 1px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 header a:hover {
-  background-color: #230044; }
+  background-color: #230044;
+}
 
 header a:active {
-  background-color: white; }
+  background-color: white;
+}
 
 header .navbar-brand {
-  width: 10%; }
+  width: 10%;
+}
 
 .bg-color {
-  background-color: #0c0c0c; }
+  background-color: #0c0c0c;
+}
 
 @media (min-width: 990px) {
+
   /* index */
   .home {
     display: flex;
@@ -42,53 +51,71 @@ header .navbar-brand {
     align-content: center;
     align-items: center;
     text-align: center;
-    background-color: black; }
-    .home .ayaxyprok {
-      margin: 15px;
-      padding: 10px;
-      width: 60%;
-      max-width: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .titulo {
-      font-size: 60px;
-      font-weight: 500;
-      max-width: 450px;
-      margin-bottom: 20px; }
-    .home .ult-conciertos {
-      font-size: 50px; }
-    .home .concierto {
-      margin: 0;
-      padding: 0px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: black;
-      justify-content: space-between; }
-    .home .conciertos-2 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .conciertos-1 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .video {
-      width: 350px;
-      max-width: 800px; }
-    .home .concierto div {
-      margin: 10px; }
+    background-color: black;
+  }
+
+  .home .ayaxyprok {
+    margin: 15px;
+    padding: 10px;
+    width: 60%;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .titulo {
+    font-size: 60px;
+    font-weight: 500;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  .home .ult-conciertos {
+    font-size: 50px;
+  }
+
+  .home .concierto {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-between;
+  }
+
+  .home .conciertos-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .conciertos-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .video {
+    width: 350px;
+    max-width: 800px;
+  }
+
+  .home .concierto div {
+    margin: 10px;
+  }
+
   /* shows */
   .home-shows {
     display: flex;
@@ -103,32 +130,48 @@ header .navbar-brand {
     padding: 25%;
     justify-content: space-evenly;
     align-items: stretch;
-    font-size: large; }
-    .home-shows .shows-dos {
-      color: #4c075e; }
+    font-size: large;
+  }
+
+  .home-shows .shows-dos {
+    color: #4c075e;
+  }
+
   /* music */
   .home-music {
     display: grid;
-    grid-template-areas: "discos discos" "ayax-discos prok-discos" "disco-duo disco-duo";
+    grid-template-areas: "discos discos"
+      "ayax-discos prok-discos"
+      "disco-duo disco-duo";
     justify-content: center;
     align-content: center;
     align-items: start;
-    justify-items: center; }
-    .home-music .discos {
-      grid-area: discos; }
-    .home-music .ayax-discos {
-      grid-area: ayax-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .prok-discos {
-      grid-area: prok-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .disco-duo {
-      grid-area: disco-duo;
-      margin: 10px;
-      padding: 5px;
-      font-weight: bold; }
+    justify-items: center;
+  }
+
+  .home-music .discos {
+    grid-area: discos;
+  }
+
+  .home-music .ayax-discos {
+    grid-area: ayax-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .prok-discos {
+    grid-area: prok-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .disco-duo {
+    grid-area: disco-duo;
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
   .home-bio {
     display: flex;
     flex-wrap: wrap;
@@ -137,11 +180,15 @@ header .navbar-brand {
     align-items: center;
     text-align: center;
     color: white;
-    background-color: black; }
-    .home-bio p {
-      margin: 5px 15px 5px 15px;
-      padding: 25px;
-      font-size: x-large; }
+    background-color: black;
+  }
+
+  .home-bio p {
+    margin: 5px 15px 5px 15px;
+    padding: 25px;
+    font-size: x-large;
+  }
+
   .home-contact {
     display: flex;
     flex-wrap: wrap;
@@ -152,41 +199,65 @@ header .navbar-brand {
     color: white;
     padding: 5%;
     justify-content: space-evenly;
-    align-items: stretch; }
-    .home-contact .info-form {
-      margin-bottom: 30px;
-      padding: 1em;
-      font-size: xx-large;
-      font-weight: bold; }
-    .home-contact .data {
-      margin: 10px;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap; }
-    .home-contact .campo {
-      margin: 10px; }
-    .home-contact .mensaje {
-      margin: 10px; }
-    .home-contact .btn-enviar {
-      margin: 10px;
-      padding: 1em; }
+    align-items: stretch;
+  }
+
+  .home-contact .info-form {
+    margin-bottom: 30px;
+    padding: 1em;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  .home-contact .data {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .home-contact .campo {
+    margin: 10px;
+  }
+
+  .home-contact .mensaje {
+    margin: 10px;
+  }
+
+  .home-contact .btn-enviar {
+    margin: 10px;
+    padding: 1em;
+  }
+
   /* footer */
   .footer {
     display: grid;
-    grid-template-areas: "copyr" "redes-uno" "redes-dos";
+    grid-template-areas: "copyr"
+      "redes-uno"
+      "redes-dos";
     justify-content: space-evenly;
     align-items: center;
     justify-items: start;
-    align-content: center; }
-    .footer .copyr {
-      grid-area: copyr; }
-    .footer .redes-uno {
-      grid-area: redes-uno; }
-    .footer .redes-dos {
-      grid-area: redes-dos; }
-    .footer .redes {
-      width: 10%; } }
+    align-content: center;
+  }
+
+  .footer .copyr {
+    grid-area: copyr;
+  }
+
+  .footer .redes-uno {
+    grid-area: redes-uno;
+  }
+
+  .footer .redes-dos {
+    grid-area: redes-dos;
+  }
+
+  .footer .redes {
+    width: 10%;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .home {
@@ -196,52 +267,70 @@ header .navbar-brand {
     align-content: center;
     align-items: center;
     text-align: center;
-    background-color: black; }
-    .home .ayaxyprok {
-      margin: 15px;
-      padding: 10px;
-      width: 60%;
-      max-width: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .titulo {
-      font-size: 30px;
-      font-weight: 5px;
-      text-decoration: underline;
-      margin-bottom: 10px; }
-    .home .ult-conciertos {
-      font-size: 20px; }
-    .home .concierto {
-      margin: 0;
-      padding: 0px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: black;
-      justify-content: space-between; }
-    .home .conciertos-2 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .conciertos-1 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .video {
-      width: 350px; }
-    .home .concierto div {
-      margin: 5px; }
+    background-color: black;
+  }
+
+  .home .ayaxyprok {
+    margin: 15px;
+    padding: 10px;
+    width: 60%;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .titulo {
+    font-size: 30px;
+    font-weight: 5px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .home .ult-conciertos {
+    font-size: 20px;
+  }
+
+  .home .concierto {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-between;
+  }
+
+  .home .conciertos-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .conciertos-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .video {
+    width: 350px;
+  }
+
+  .home .concierto div {
+    margin: 5px;
+  }
+
   /* shows */
   .home-shows {
     display: flex;
@@ -255,32 +344,48 @@ header .navbar-brand {
     padding: 25%;
     justify-content: space-evenly;
     align-items: stretch;
-    font-size: medium; }
-    .home-shows .shows-dos {
-      color: #73048f;
-      text-decoration: underline; }
+    font-size: medium;
+  }
+
+  .home-shows .shows-dos {
+    color: #73048f;
+    text-decoration: underline;
+  }
+
   .home-music {
     display: grid;
-    grid-template-areas: "discos discos" "ayax-discos prok-discos" "disco-duo disco-duo";
+    grid-template-areas: "discos discos"
+      "ayax-discos prok-discos"
+      "disco-duo disco-duo";
     justify-content: center;
     align-content: center;
     align-items: start;
-    justify-items: center; }
-    .home-music .discos {
-      grid-area: discos; }
-    .home-music .ayax-discos {
-      grid-area: ayax-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .prok-discos {
-      grid-area: prok-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .disco-duo {
-      grid-area: disco-duo;
-      margin: 10px;
-      padding: 5px;
-      font-weight: bold; }
+    justify-items: center;
+  }
+
+  .home-music .discos {
+    grid-area: discos;
+  }
+
+  .home-music .ayax-discos {
+    grid-area: ayax-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .prok-discos {
+    grid-area: prok-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .disco-duo {
+    grid-area: disco-duo;
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
   .home-bio {
     display: flex;
     flex-wrap: wrap;
@@ -289,11 +394,15 @@ header .navbar-brand {
     align-items: center;
     text-align: center;
     color: white;
-    background-color: black; }
-    .home-bio p {
-      margin: 5px 15px 5px 15px;
-      padding: 25px;
-      font-size: medium; }
+    background-color: black;
+  }
+
+  .home-bio p {
+    margin: 5px 15px 5px 15px;
+    padding: 25px;
+    font-size: medium;
+  }
+
   .home-contact {
     display: flex;
     flex-wrap: wrap;
@@ -304,25 +413,37 @@ header .navbar-brand {
     color: white;
     padding: 5%;
     justify-content: space-evenly;
-    align-items: stretch; }
-    .home-contact .info-form {
-      margin-bottom: 30px;
-      padding: 1em;
-      font-size: medium;
-      font-weight: bolder; }
-    .home-contact .data {
-      margin: 10px;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap; }
-    .home-contact .campo {
-      margin: 10px; }
-    .home-contact .mensaje {
-      margin: 10px; }
-    .home-contact .btn-enviar {
-      margin: 10px;
-      padding: 1em; }
+    align-items: stretch;
+  }
+
+  .home-contact .info-form {
+    margin-bottom: 30px;
+    padding: 1em;
+    font-size: medium;
+    font-weight: bolder;
+  }
+
+  .home-contact .data {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .home-contact .campo {
+    margin: 10px;
+  }
+
+  .home-contact .mensaje {
+    margin: 10px;
+  }
+
+  .home-contact .btn-enviar {
+    margin: 10px;
+    padding: 1em;
+  }
+
   /* footer */
   .footer {
     display: flex;
@@ -331,9 +452,13 @@ header .navbar-brand {
     justify-content: space-evenly;
     align-items: center;
     justify-items: start;
-    align-content: center; }
-    .footer .redes {
-      width: 10%; } }
+    align-content: center;
+  }
+
+  .footer .redes {
+    width: 10%;
+  }
+}
 
 @media screen and (min-width: 480px) and (max-width: 990px) {
   .home {
@@ -343,53 +468,71 @@ header .navbar-brand {
     align-content: center;
     align-items: center;
     text-align: center;
-    background-color: black; }
-    .home .ayaxyprok {
-      margin: 15px;
-      padding: 10px;
-      width: 60%;
-      max-width: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .titulo {
-      font-size: 50px;
-      font-weight: 500;
-      max-width: 450px;
-      margin-bottom: 20px; }
-    .home .ult-conciertos {
-      font-size: 30px; }
-    .home .concierto {
-      margin: 0;
-      padding: 0px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: black;
-      justify-content: space-between; }
-    .home .conciertos-2 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .conciertos-1 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center; }
-    .home .video {
-      width: 350px;
-      max-width: 800px; }
-    .home .concierto div {
-      margin: 15px; }
+    background-color: black;
+  }
+
+  .home .ayaxyprok {
+    margin: 15px;
+    padding: 10px;
+    width: 60%;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .titulo {
+    font-size: 50px;
+    font-weight: 500;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  .home .ult-conciertos {
+    font-size: 30px;
+  }
+
+  .home .concierto {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-between;
+  }
+
+  .home .conciertos-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .conciertos-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .video {
+    width: 350px;
+    max-width: 800px;
+  }
+
+  .home .concierto div {
+    margin: 15px;
+  }
+
   .home-shows {
     display: flex;
     flex-wrap: wrap;
@@ -403,31 +546,47 @@ header .navbar-brand {
     padding: 25%;
     justify-content: space-evenly;
     align-items: stretch;
-    font-size: large; }
-    .home-shows .shows-dos {
-      color: #8d44a0; }
+    font-size: large;
+  }
+
+  .home-shows .shows-dos {
+    color: #8d44a0;
+  }
+
   .home-music {
     display: grid;
-    grid-template-areas: "discos discos" "ayax-discos prok-discos" "disco-duo disco-duo";
+    grid-template-areas: "discos discos"
+      "ayax-discos prok-discos"
+      "disco-duo disco-duo";
     justify-content: center;
     align-content: center;
     align-items: start;
-    justify-items: center; }
-    .home-music .discos {
-      grid-area: discos; }
-    .home-music .ayax-discos {
-      grid-area: ayax-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .prok-discos {
-      grid-area: prok-discos;
-      margin: 10px;
-      padding: 5px; }
-    .home-music .disco-duo {
-      grid-area: disco-duo;
-      margin: 10px;
-      padding: 5px;
-      font-weight: bold; }
+    justify-items: center;
+  }
+
+  .home-music .discos {
+    grid-area: discos;
+  }
+
+  .home-music .ayax-discos {
+    grid-area: ayax-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .prok-discos {
+    grid-area: prok-discos;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .home-music .disco-duo {
+    grid-area: disco-duo;
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
   .home-bio {
     display: flex;
     flex-wrap: wrap;
@@ -436,11 +595,15 @@ header .navbar-brand {
     align-items: center;
     text-align: center;
     color: white;
-    background-color: black; }
-    .home-bio p {
-      margin: 5px 15px 5px 15px;
-      padding: 25px;
-      font-size: large; }
+    background-color: black;
+  }
+
+  .home-bio p {
+    margin: 5px 15px 5px 15px;
+    padding: 25px;
+    font-size: large;
+  }
+
   .home-contact {
     display: flex;
     flex-wrap: wrap;
@@ -451,25 +614,37 @@ header .navbar-brand {
     color: white;
     padding: 5%;
     justify-content: space-evenly;
-    align-items: stretch; }
-    .home-contact .info-form {
-      margin-bottom: 30px;
-      padding: 1em;
-      font-size: large;
-      font-weight: bold; }
-    .home-contact .data {
-      margin: 10px;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap; }
-    .home-contact .campo {
-      margin: 10px; }
-    .home-contact .mensaje {
-      margin: 10px; }
-    .home-contact .btn-enviar {
-      margin: 10px;
-      padding: 1em; } }
+    align-items: stretch;
+  }
+
+  .home-contact .info-form {
+    margin-bottom: 30px;
+    padding: 1em;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .home-contact .data {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .home-contact .campo {
+    margin: 10px;
+  }
+
+  .home-contact .mensaje {
+    margin: 10px;
+  }
+
+  .home-contact .btn-enviar {
+    margin: 10px;
+    padding: 1em;
+  }
+}
 
 h1 {
   font-family: 'Times New Roman', Times, serif;
@@ -477,14 +652,16 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+}
 
 h2 {
   font-family: verdana;
   font-size: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center; }
+  text-align: center;
+}
 
 .home {
   display: flex;
@@ -494,50 +671,69 @@ h2 {
   align-items: center;
   text-align: center;
   color: white;
-  background-color: black; }
-  .home .ayaxyprok {
-    margin: 10px;
-    padding: 10px;
-    width: 60%;
-    max-width: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center; }
-  .home .concierto {
-    margin: 10px;
-    padding: 5px;
-    max-width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: column;
-    align-content: center;
-    align-items: center; }
-  .home .video {
-    width: 100%;
-    max-width: 100%; }
-  .home .concierto div {
-    margin: 10px; }
+  background-color: black;
+}
+
+.home .ayaxyprok {
+  margin: 10px;
+  padding: 10px;
+  width: 60%;
+  max-width: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .concierto {
+  margin: 10px;
+  padding: 5px;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.home .video {
+  width: 100%;
+  max-width: 100%;
+}
+
+.home .concierto div {
+  margin: 10px;
+}
 
 footer {
   display: grid;
-  grid-template-areas: "copyr copyr" "redes-uno redes-dos";
+  grid-template-areas: "copyr copyr"
+    "redes-uno redes-dos";
   justify-content: center;
   align-items: center;
   justify-items: stretch;
   align-content: center;
-  background-color: black; }
-  footer .copyr {
-    grid-area: copyr; }
-  footer .redes-uno {
-    grid-area: redes-uno; }
-  footer .redes-dos {
-    grid-area: redes-dos; }
-  footer .redes {
-    width: 10%; }
+  background-color: black;
+}
+
+footer .copyr {
+  grid-area: copyr;
+}
+
+footer .redes-uno {
+  grid-area: redes-uno;
+}
+
+footer .redes-dos {
+  grid-area: redes-dos;
+}
+
+footer .redes {
+  width: 10%;
+}
 
 .home-shows {
   display: flex;
@@ -550,7 +746,8 @@ footer {
   color: white;
   padding: 10%;
   justify-content: space-evenly;
-  align-items: stretch; }
+  align-items: stretch;
+}
 
 .home-music {
   display: flex;
@@ -560,24 +757,33 @@ footer {
   align-items: center;
   text-align: center;
   background-color: black;
-  color: white; }
-  .home-music .img-discos {
-    width: 60%;
-    margin: 10px; }
-  .home-music .ayp {
-    font-weight: bolder;
-    text-decoration: underline;
-    margin: 15px;
-    padding: 20px;
-    color: #56205e; }
-  .home-music .prok-discos {
-    grid-area: prok-discos;
-    margin: 10px;
-    padding: 5px; }
-  .home-music .ayax-discos {
-    grid-area: prok-discos;
-    margin: 10px;
-    padding: 5px; }
+  color: white;
+}
+
+.home-music .img-discos {
+  width: 60%;
+  margin: 10px;
+}
+
+.home-music .ayp {
+  font-weight: bolder;
+  text-decoration: underline;
+  margin: 15px;
+  padding: 20px;
+  color: #56205e;
+}
+
+.home-music .prok-discos {
+  grid-area: prok-discos;
+  margin: 10px;
+  padding: 5px;
+}
+
+.home-music .ayax-discos {
+  grid-area: prok-discos;
+  margin: 10px;
+  padding: 5px;
+}
 
 /* bio */
 .home-bio {
@@ -588,7 +794,8 @@ footer {
   align-items: center;
   text-align: center;
   color: white;
-  background-color: black; }
+  background-color: black;
+}
 
 .home-contact {
   display: flex;
@@ -600,23 +807,36 @@ footer {
   color: white;
   padding: 5%;
   justify-content: space-evenly;
-  align-items: stretch; }
-  .home-contact .info-form {
-    margin-bottom: 30px;
-    padding: 1em; }
-  .home-contact .data {
-    margin: 10px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; }
-  .home-contact .campo {
-    margin: 10px; }
-  .home-contact .mensaje {
-    margin: 10px; }
-  .home-contact .btn-enviar {
-    margin: 10px;
-    padding: 1em; }
-  .home-contact .contact {
-    font-weight: bolder;
-    font-size: xx-large; }
+  align-items: stretch;
+}
+
+.home-contact .info-form {
+  margin-bottom: 30px;
+  padding: 1em;
+}
+
+.home-contact .data {
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.home-contact .campo {
+  margin: 10px;
+}
+
+.home-contact .mensaje {
+  margin: 10px;
+}
+
+.home-contact .btn-enviar {
+  margin: 10px;
+  padding: 1em;
+}
+
+.home-contact .contact {
+  font-weight: bolder;
+  font-size: xx-large;
+}
