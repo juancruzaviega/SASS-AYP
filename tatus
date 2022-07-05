@@ -1,0 +1,35 @@
+[33mcommit 359c9f4013397b4eeb2c05cf6bddb3ea8067b900[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Mon May 16 23:23:00 2022 -0300
+
+    agrego import al footer
+
+[33mcommit b5f83c89d44bb4a8115b76796466c4b2b15ba88d[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Mon May 16 23:15:47 2022 -0300
+
+    arreglos menores y limpieza codigo basura
+
+[33mcommit b5e37a17b7d37bde6e659fd2d6e0ec15c0b17029[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Mon May 16 22:26:00 2022 -0300
+
+    arreglo texto en contacto
+
+[33mcommit 9fb1473d2edd4e236c4849d8bbff7d87e77ce7fa[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Fri May 13 16:29:58 2022 -0300
+
+    agrego titulo a music
+
+[33mcommit f1326c60862bb2d138f91fd8ba86243c7a706e4e[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Fri May 13 16:22:31 2022 -0300
+
+    agrego titulos, keywords y descripcion
+
+[33mcommit 1a101d3b88c7933ab3c7f5f01cd82ab253ba2578[m
+Author: Juan Aviega <juancruzaviega@gmail.com>
+Date:   Fri May 13 13:44:30 2022 -0300
+
+    aplique mixins - variables

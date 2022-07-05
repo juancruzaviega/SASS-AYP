@@ -1,0 +1,9 @@
+Hola Diego! la estructura html es la de mi final de desarrollo web, la usé para ver si andaba bien agregandole js y porque mi idea para el desafio fue hacer un simulador de venta de entradas, teniendo en cuenta que el maximo para entrada gral es 100, y para entrada vip 23.
+
+el problema que me surgio es que si intento "comprar" 100 o 23 respectivamente, me lo toma como que no hay entradas suficientes.
+
+probé en las funciones agregarle por ejemplo: if (stockGral >= cant){ (osea que sea mayor o igual), pero me lo toma de la misma forma.
+
+seguro sea una pavada o esté poniendo el >= donde no va, pero si sabes por que no me deja comprar la totalidad del stock te lo agradezco.
+
+saludos!
