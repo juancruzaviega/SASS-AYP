@@ -1,6 +1,6 @@
 // variables
-let stockGral = 100;
-let stockVip = 23;
+let stockGral = 999;
+let stockVip = 200;
 let lugar;
 
 // funciones
@@ -25,16 +25,16 @@ const comprarVip = (cant) => {
 
 // menu
 do {
-    lugar = Number(prompt('Seleccione el lugar que desea comprar:\n\n1 - General\n2 - VIP (incluye Meet & Greet)\n3 - Salir '));
+    lugar = parseInt(prompt('Seleccione el lugar que desea comprar:\n\n1 - General\n2 - VIP (incluye Meet & Greet)\n3 - Salir '));
     let cant;
 
     switch (lugar) {
         case 1:
-            cant = Number(prompt('Ingrese la cantidad de entradas que desea:'));
+            cant = parseInt(prompt('Ingrese la cantidad de entradas que desea:'));
             comprarGral(cant);
             break;
         case 2:
-            cant = Number(prompt('Ingrese la cantidad de entradas que desea:'));
+            cant = parseInt(prompt('Ingrese la cantidad de entradas que desea:'));
             comprarVip(cant);
             break;
         case 3:
