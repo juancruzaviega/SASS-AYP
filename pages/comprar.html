@@ -1,40 +1,78 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="../js/preentregaAviega.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <title>COMPRA TUS ENTRADAS !</title>
 </head>
+
 <body>
-    <div>
-        <a href="/comprar.html">Finalizar compra</a>
-        <select name="categoria" id="categoria">
-            <option value="gral">General</option>
-            <option value="vip">VIP</option>
-        </select>
-        <div>
-            <p>id: 1</p>
-            <h2>Entrada General - Campo</h2>
-            <p>Precio: 1500</p>
-            <p>Categoria: General</p>
-            <button>Agregar al carro</button>
-        </div>
-        <div>
-            <p>id: 2</p>
-            <h2>Entrada General - Platea</h2>
-            <p>Precio: 2000</p>
-            <p>Categoria: General</p>
-            <button>Agregar al carro</button>
-        </div>
-        <div>
-            <p>id: 3</p>
-            <h2>Entrada VIP + Meet & Greet</h2>
-            <p>Precio: 3500</p>
-            <p>Categoria: VIP</p>
-            <button>Agregar al carro</button>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Entradas para el concierto</h3>
+                <form id="formulario">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input id="nombre" class="form-control" type="text" placeholder="Ingresa un nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Precio</label>
+                        <input id="precioCompra" class="form-control" type="text" placeholder="Ingresa precio de la entrada">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Sector</label>
+                        <input id="precioVenta" class="form-control" type="text" placeholder="Ingresa sector">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cantidad</label>
+                        <input id="cantidad" class="form-control" type="text" placeholder="Ingresa la cantidad">
+                    </div>
+                
+                    <!-- <div class="mb-3">
+                        <label class="form-label">selecionar</label>
+                        <select name="" id="select">
+                            <option value="">argentina</option>
+                            <option value="">brasil</option>
+                            <option value="">chile</option>
+                        </select>
+                    </div> -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Añadir al carro</button>
+                    </div>
+                    <div class="errores">
+                        <h1>Faltar llenar campos</h1>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-md-6">
+                <table id="tablaProductos" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>Precio</td>
+                            <td>Sector</td>
+                            <td>Cantidad</td>
+                        </tr>
+                        </th>
+                        
+                        <tbody class="tabla">
+                            
+                        </tbody>
+                        
+                </table>
+            </div>
         </div>
     </div>
-</body>
+
+<script defer src="../js/eventos.js"></script>
+</body> 
+
 </html>
