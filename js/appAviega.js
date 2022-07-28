@@ -1,48 +1,57 @@
-// variables
-let stockGral = 999;
-let stockVip = 200;
-let lugar;
+let productos = [
+{ id: 100, nombre: "Entrada Campo", precio: 1550 },
+{ id: 101, nombre: "Entrada Platea", precio: 2500 },
+{ id: 102, nombre: "Entrada VIP + Meet & Greet", precio: 3500 },
+];
 
-// funciones
-const comprarGral = (cant) => {
-    if (stockGral > cant){
-        stockGral = stockGral - cant;
-        console.log(`Compra exitosa, quedan ${stockGral} entradas.`);
-    } else {
-        console.log(`No se pudo registrar su compra, quedan ${stockGral} entradas.`);
-    }
+let aux = localStorage.getItem("productosEnCarro");
+let productosEnCarro;
+
+if (!aux) {
+productosEnCarro = [];
+} else {
+productosEnCarro = JSON.parse(aux);
+pintarCarrito();
 }
 
-const comprarVip = (cant) => {
-    if (stockVip > cant){
-        stockVip = stockVip - cant;
-        console.log(`Compra exitosa, quedan ${stockVip} entradas.`);
-    } else {
-        console.log(`No se pudo registrar su compra, quedan ${stockVip} entradas.`);
-    }
+function pintarListado() {
+let aux = "";
+for (let i = 0; i < productos.length; i++) {
+    aux =
+aux +
+`<div onclick="meterAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})" style="cursor: pointer; border: 1px solid grey;">
+<h3> Nombre: ${productos[i].nombre} </h3>
+<p> Precio: $ ${productos[i].precio} </p>
+<p> ID: ${productos[i].id} </p>
+    </div>`;
+}
+document.getElementById("div-productos").innerHTML = aux;
+}
+pintarListado();
+
+function meterAlCarro(objetosProducto) {
+productosEnCarro.push(objetosProducto);
+localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
+pintarCarrito();
 }
 
+function borrarDelCarro(id) {
+productosEnCarro.splice(id, 1);
+localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
+pintarCarrito();
+}
 
-// menu
-do {
-    lugar = parseInt(prompt('Seleccione el lugar que desea comprar:\n\n1 - General\n2 - VIP (incluye Meet & Greet)\n3 - Salir '));
-    let cant;
-
-    switch (lugar) {
-        case 1:
-            cant = parseInt(prompt('Ingrese la cantidad de entradas que desea:'));
-            comprarGral(cant);
-            break;
-        case 2:
-            cant = parseInt(prompt('Ingrese la cantidad de entradas que desea:'));
-            comprarVip(cant);
-            break;
-        case 3:
-            alert('Adios!');
-            break;
-        default:
-            alert('Opcion incorrecta');
-            break;
-    }
-
-} while(lugar !== 3);
+function pintarCarrito() {
+let aux = "";
+for (let i = 0; i < productosEnCarro.length; i++) {
+    aux =
+aux +
+`<div>
+<h3> Nombre: ${productosEnCarro[i].nombre} </h3>
+<p> Precio: $ ${productosEnCarro[i].precio} </p>
+<p> ID: ${productosEnCarro[i].id} </p>
+<p onclick="borrarDelCarro(${i})" style="cursor: pointer; border: 2px solid red; display: inline-block;"> Borrar del carro 🗑️ </p>
+    </div>`;
+}
+document.getElementById("div-carrito").innerHTML = aux;
+}
