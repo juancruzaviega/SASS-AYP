@@ -55,3 +55,34 @@ aux +
 }
 document.getElementById("div-carrito").innerHTML = aux;
 }
+
+function manejeElClick() {
+    Toastify({
+        text: "Producto agregado al carro!",
+        duration: 3000,
+        gravity: 'bottom',
+        position: 'left',
+        
+        style: {
+            background: 'linear-gradient(to right, black, green)',
+            
+        }
+    }).showToast();
+
+}
+
+function manejeElClickBorrar() {
+    Toastify({
+        text: "Producto borrado del carro!",
+        duration: 3000,
+        gravity: 'bottom',
+        position: 'left',
+        
+        style: {
+            background: 'linear-gradient(to right, black, red)',
+            
+        }
+    }).showToast();
+
+}
+
