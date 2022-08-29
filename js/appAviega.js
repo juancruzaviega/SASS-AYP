@@ -1,177 +1,115 @@
-// let productos = [
-// { id: 100, nombre: "Entrada Campo", precio: 1550 },
-// { id: 101, nombre: "Entrada Platea", precio: 2500 },
-// { id: 102, nombre: "Entrada VIP + Meet & Greet", precio: 3500 },
-// ];
 
-// let aux = localStorage.getItem("productosEnCarro");
-// let productosEnCarro;
 
-// if (!aux) {
-// productosEnCarro = [];
-// } else {
-// productosEnCarro = JSON.parse(aux);
-// pintarCarrito();
-// }
 
-// function pintarListado() {
-// let aux = "";
-// for (let i = 0; i < productos.length; i++) {
-//     aux =
-// aux +
-// `<div onclick="meterAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})" style="cursor: pointer; border: 1px solid grey;">
-// <h3> Nombre: ${productos[i].nombre} </h3>
-// <p> Precio: $ ${productos[i].precio} </p>
-// <p> ID: ${productos[i].id} </p>
-//     </div>`;
-// }
-// document.getElementById("div-productos").innerHTML = aux;
-// }
-// pintarListado();
 
-// function meterAlCarro(objetosProducto) {
-// productosEnCarro.push(objetosProducto);
-// localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-// pintarCarrito();
-// }
 
-// function borrarDelCarro(id) {
-// productosEnCarro.splice(id, 1);
-// localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-// pintarCarrito();
-// }
 
-// function pintarCarrito() {
-// let aux = "";
-// for (let i = 0; i < productosEnCarro.length; i++) {
-//     aux =
-// aux +
-// `<div>
-// <h3> Nombre: ${productosEnCarro[i].nombre} </h3>
-// <p> Precio: $ ${productosEnCarro[i].precio} </p>
-// <p> ID: ${productosEnCarro[i].id} </p>
-// <p onclick="borrarDelCarro(${i})" style="cursor: pointer; border: 2px solid red; display: inline-block;"> Borrar del carro 🗑️ </p>
-//     </div>`;
-// }
-// document.getElementById("div-carrito").innerHTML = aux;
-// }
 
-// function manejeElClick() {
-//     Toastify({
-//         text: "Producto agregado al carro!",
-//         duration: 3000,
-//         gravity: 'bottom',
-//         position: 'left',
-        
-//         style: {
-//             background: 'linear-gradient(to right, black, green)',
-            
-//         }
-//     }).showToast();
+const listaProductos = document.getElementById('contenedor-productos');
+const contenedorCarrito = document.getElementById('carrito-contenedor');
+const botonVaciar = document.getElementById('vaciar-carrito');
+const precioTotal = document.getElementById('precioTotal');
+let carrito = [];
 
-// }
 
-// function manejeElClickBorrar() {
-//     Toastify({
-//         text: "Producto borrado del carro!",
-//         duration: 3000,
-//         gravity: 'bottom',
-//         position: 'left',
-        
-//         style: {
-//             background: 'linear-gradient(to right, black, red)',
-            
-//         }
-//     }).showToast();
+document.addEventListener('DOMContentLoaded', () =>{
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
 
-// }
 
-fetch('./data.json')
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito();
+})
+let myArray = [];
+
+
+function mostrarProductos() { 
+    fetch('../data.json')
     .then((resinicial) => resinicial.json())
     .then((res) => {
-        const entradas = res;
+        res.forEach((producto) => {
+            const div = document.createElement('div')
+            div.innerHTML = `
+            <h3>${producto.name}</h3>
+            <p>Precio: $${producto.precio}</p>
+            <button onclick="manejeElClick()" id="agregar${producto.id}" class="boton-agregar" >Agregar al carro</button>
+            `
+            listaProductos.appendChild(div)
 
-        let htmlAux = '';
-        for (let i = 0; i < entradas.length; i++) {
-            htmlAux = htmlAux +
-            `<div onclick="meterAlCarro(${entradas[i].id});">
-                <h3>${entradas[i].name}</h3>
-                <p>${entradas[i].precio}</p>
-
-            </div>`;
+            const boton = document.getElementById(`agregar${producto.id}`)
+            boton.addEventListener('click', () =>{
+                agregarAlCarrito(producto.id)
+            })
         }
-        document.getElementById('listadoDeProductos').innerHTML = htmlAux;
-    })
-    .catch((e) => {
-        console.log(e);
-    });
-
-let aux = localStorage.getItem('productosEnCarro');
-let productosEnCarro;
-
-if (!aux) {
-    productosEnCarro = [];
-    } else {
-    productosEnCarro = JSON.parse(aux);
-    pintarCarrito();
+        )
     }
+)}
+mostrarProductos();
 
 
 
-
-function pintarListado() {
-        let entradas = "";
-        for (let i = 0; i < entradas.length; i++) {
-            aux =
-        aux +
-        `<div onclick="meterAlCarro({id: ${entradas[i].id}, nombre: '${entradas[i].name}', precio: ${entradas[i].precio}})" style="cursor: pointer; border: 1px solid grey;">
-        <h3> Nombre: ${entradas[i].name} </h3>
-        <p> Precio: $ ${entradas[i].precio} </p>
-        <p> ID: ${entradas[i].id} </p>
-            </div>`;
-        }
-        document.getElementById("listadoDeProductos").innerHTML = aux;
-        }
-        pintarListado();
-
-
-        function meterAlCarro(id) {
-            productosEnCarro.push(id);
-            localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-            pintarCarrito();
+const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some(prod => prod.id === prodId)
+    if(existe){
+        const prod = carrito.map (prod => {
+            if(prod.id === prodId){
+                prod.cantidad++
             }
+        })
+    }else{
+
+    const item = stockProductos.find((prod) => prod.id === prodId);
+    carrito.push(item);
+    
+    console.log(carrito);
+}
+actualizarCarrito();
+}
 
 
-            function borrarDelCarro(id) {
-                productosEnCarro.splice(id, 1);
-                localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-                pintarCarrito();
-                }
+
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    
+    const i = carrito.indexOf(item)
+    carrito.splice(i, 1)
+    actualizarCarrito()
+}
+
+
+
+const actualizarCarrito = () => {
+contenedorCarrito.innerHTML = ""
+
+
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <p>${prod.name}</p>
+        <p>Precio: ${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="btn-eliminar"><i class="fas fa-trash-alt">Eliminar</button>
+        `
+        contenedorCarrito.appendChild(div)
+
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+    })
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+}
 
 
 
 
 
-
-            function pintarCarrito() {
-                let aux = "";
-                for (let i = 0; i < productosEnCarro.length; i++) {
-                    aux =
-                aux +
-                `<div>
-                    <h3> Nombre: ${productosEnCarro[i].name} </h3>
-                    <p> Precio: $ ${productosEnCarro[i].precio} </p>
-                    <p> ID: ${productosEnCarro[i].id} </p>
-                    <p onclick="borrarDelCarro(${i})" style="cursor: pointer; border: 2px solid red; display:       inline-block;"> Borrar del carro 🗑️ </p>
-                </div>`;
-                }
-                document.getElementById("div-carrito").innerHTML = aux;
-                }
 
 
                 function manejeElClick() {
                     Toastify({
-                        text: "Producto agregado al carro!",
+                        text: "Agregado al carro!",
                         duration: 3000,
                         gravity: 'bottom',
                         position: 'left',
@@ -186,7 +124,7 @@ function pintarListado() {
                 
                 function manejeElClickBorrar() {
                     Toastify({
-                        text: "Producto borrado del carro!",
+                        text: "Carrito vacío!",
                         duration: 3000,
                         gravity: 'bottom',
                         position: 'left',

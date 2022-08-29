@@ -9,21 +9,37 @@
     <title>Segunda Entrega Del Proyecto Final</title>
 </head>
 <body class="home">
-    <header>
+    <header >
         <a href="../index.html">Inicio</a>
     </header>
     <h1>Bienvenidos</h1>
     <h2>Compra tus entradas!</h2>
     <h3>Disponible:</h3>
-    <div id="listadoDeProductos"></div>
-    <div id="div-productos" onclick="manejeElClick()">Agregar al carro</div>
+    <main  id="contenedor-productos">
+
+
+    </main>
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"></button>
+            <div id="carrito-contenedor"></div>
+            <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
+            <button onclick="manejeElClickBorrar()" id="vaciar-carrito" class="boton-agregar">Vaciar carrito🗑️</button>
+        </div>
+    </div>
     
-    <h3>En Carro</h3>
+    
+    
+    
 
     <div id="div-carrito" onclick="manejeElClickBorrar()"></div>
     
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script  src="../js/appAviega.js"></script>
+    <script src="../js/stock.js"></script>
+
+    
 </body>
 </html>
